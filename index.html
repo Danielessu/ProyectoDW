@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Delicioso</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+
+        <h1>Santo Domingo</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="javascript:void(0);" onclick="toggleCarrito()">🛒 Carrito (<span
+                            id="cart-count">0</span>)</a></li>
+                <li><a href="Nosotros.html">Nuestro Equipo/Reservas</a></li>
+            </ul>
+        </nav>
+
+
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Disfruta de una experiencia gastronómica de lujo</h2>
+            <p>Sabores únicos, ingredientes frescos y un ambiente exclusivo para ti.</p>
+            <a href="#menu" class="btn">Ver Menú</a>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2>Nuestro Menú</h2>
+        <div class="menu-container">
+
+            <!-- Entradas -->
+            <div class="menu-section">
+                <h3>🥗 Entradas</h3>
+                <div class="menu-grid">
+                    <div class="categoria">
+                        <h4>Ensalada César</h4>
+                        <img src="Ensalada.png" alt="Ensalada César">
+                        <p>Lechuga romana, parmesano, pollo a la parrilla, croutones y salsa César casera.</p>
+                        <span>$12</span>
+                        <button onclick="agregarAlCarrito('Ensalada César', 12)">Agregar</button>
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Sushi Selection</h4>
+                        <img src="sushi.png" alt="Sushi Selection">
+                        <p>Nigiris de salmón y atún, rolls con aguacate y tempura, acompañados de salsa soya.</p>
+                        <span>$30</span>
+                        <button onclick="agregarAlCarrito('Sushi Selection', 30)">Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platos Fuertes -->
+            <div class="menu-section">
+                <h3>🍽️ Platos Fuertes</h3>
+                <div class="menu-grid">
+                    <div class="categoria">
+                        <h4>Steak con Salsa</h4>
+                        <img src="Carne.png" alt="Steak con salsa">
+                        <p>Filete de res a la parrilla con salsa de vino tinto, acompañado de espárragos y papas baby.
+                        </p>
+                        <span>$25</span>
+                        <button onclick="agregarAlCarrito('Steak con Salsa', 25)">Agregar</button>
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Salmón Glaseado</h4>
+                        <img src="salmon.png" alt="Salmón glaseado">
+                        <p>Salmón premium con glaseado cítrico, espárragos y puré de papa con mantequilla.</p>
+                        <span>$22</span>
+                        <button onclick="agregarAlCarrito('Salmón Glaseado', 22)">Agregar</button>
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Fettuccine en Salsa de Trufa</h4>
+                        <img src="pasta.png" alt="Fettuccine con trufa">
+                        <p>Pasta fresca bañada en salsa de trufa negra, con queso parmesano y champiñones.</p>
+                        <span>$18</span>
+                        <button onclick="agregarAlCarrito('Fettuccine en Salsa de Trufa', 18)">Agregar</button>
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Pizza Caprese</h4>
+                        <img src="PIZZA.png" alt="Pizza Caprese">
+                        <p>Pizza de masa fina con mozzarella fresca, tomate cherry, albahaca y balsámico.</p>
+                        <span>$20</span>
+                        <button onclick="agregarAlCarrito('Pizza Caprese', 20)">Agregar</button>
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Hamburguesa</h4>
+                        <img src="Hamburguesa.png" alt="Hamburguesa">
+                        <p>Exquisita Hamburguesa con carne jugosa y vegetales frescos, acompañado de nuestra salsa santo
+                            domingo especial.</p>
+                        <span>$20</span>
+                        <button onclick="agregarAlCarrito('Hamburguesa', 20)">Agregar</button>
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Langostino</h4>
+                        <img src="langostino.png" alt="langostino">
+                        <p>Exquisita langosta entera a la parrilla, bañada en una mantequilla infusionada con ajo, finas
+                            hierbas y limón. Acompañada de una selección de salsas especiales y guarnición de verduras
+                            asadas. 🍋🧈</p>
+                        <span>$60</span>
+                        <button onclick="agregarAlCarrito('Langostino', 60)">Agregar</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Bebidas -->
+            <div class="menu-section">
+                <h3>🍹 Bebidas</h3>
+                <div class="menu-grid">
+                    <div class="categoria">
+                        <h4>Cóctel Golden Martini</h4>
+                        <img src="Martini.png" alt="Golden Martini">
+                        <p>Martini dorado servido en copa de cristal con un twist de cítricos.</p>
+                        <span>$15</span>
+                        <button onclick="agregarAlCarrito('Cóctel Golden Martini', 15)">Agregar</button>
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Limonada</h4>
+                        <img src="limonada.png" alt="Limonada">
+                        <p>Martini dorado servido en copa de cristal con un twist de cítricos.</p>
+                        <span>$8</span>
+                        <button onclick="agregarAlCarrito('Limonada', 8)">Agregar</button>
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Coca Cola</h4>
+                        <img src="Sodificada real.png" alt="Sodificada Naranja">
+                        <p>El clásico refresco de coca cola, servido en vaso alto con cubos de hielo</p>
+                        <span>$8</span>
+                        <button onclick="agregarAlCarrito('Coca Cola', 8)">Agregar</button>
+                    </div>
+
+                    <div class="categoria">
+                        <h4>Sodificada de Limón</h4>
+                        <img src="Sodificada Naranja.png" alt="Sodificada limon">
+                        <p>Una bebida refrescante, elaborada con agua con gas, rodajas de limón y hielo. </p>
+                        <span>$8</span>
+                        <button onclick="agregarAlCarrito('Sodificada de Limón', 8)">Agregar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- postres -->
+            <div class="menu-section">
+                <h3> 🍨Postres</h3>
+                <div class="menu-grid">
+                    <div class="categoria">
+                        <h4>Volcán de Chocolate</h4>
+                        <img src="Volcan.png" alt="Volcán de chocolate">
+                        <p>Un irresistible pastel de chocolate caliente con un centro de chocolate fundido que se
+                            derrama al primer corte.</p>
+                        <span>$10</span>
+                        <button onclick="agregarAlCarrito('Volcán de Chocolate', 10)">Agregar</button>
+                    </div>
+                    <div class="categoria">
+                        <h4>Cheesecake de Fresa </h4>
+                        <img src="cheese cake.png" alt="cheesecake">
+                        <p>Cheesecake de fresa con glaseado brillante y menta fresca, con fondo gris claro. 🍓🍰✨</p>
+                        <span>$8</span>
+                        <button onclick="agregarAlCarrito('Cheesecake de Fresa', 8)">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart" id="cart">
+        <button class="close-btn" onclick="toggleCarrito()">✖</button>
+        <h3>Carrito de Compras</h3>
+        <!-- Contenedor con scroll -->
+        <div class="cart-content">
+            <ul id="cart-items"></ul>
+        </div>
+        <p class="cart-counter">Items en el carrito: <span id="header-cart-count">0</span></p>
+        <!-- Elemento para mostrar el total de items -->
+        <p>Valor total: $<span id="cart-total">0.00</span></p> <!-- Elemento para mostrar el valor total de items -->
+        <button id="vaciar-carrito-btn" onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <a href="#"><button id="ordenar-comida-btn" type="button" onclick="ordenarComida()">Ordenar</button></a>
+        <!-- Nuevo botón para ordenar comida -->
+    </div>
+
+    <div id="order-message" class="order-message" style="display: none;">
+        <div class="order-message-content">
+            <h4 id="order-message-text"></h4>
+        </div>
+    </div>
+</body>
+
+</html>
