@@ -68,13 +68,13 @@ Este proyecto fue creado como parte de la asignatura **Desarrollo Web**, aplican
 1. Clonar el repositorio desde GitHub:
 
 ```bash
-git clone https://github.com/Danielessu/ProyectoDesarrolloWeb.git
+git clone https://github.com/Danielessu/ProyectoDW.git
 ```
 
 2. Abrir el archivo `index.html` en el navegador:
 
 ```bash
-cd ProyectoDesarrolloWeb
+cd ProyectoDW
 open index.html  # (En Windows, doble clic sobre el archivo)
 ```
 
